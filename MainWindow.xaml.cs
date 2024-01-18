@@ -196,12 +196,12 @@ namespace savichev18pr
         {
             TypeOperationsWindow newTOW = new TypeOperationsWindow();
             newTOW.typeOperationText = typeOperation.SelectedItem as String;
-            newTOW.typeOperation = typeOperationList.Find(i => i.name == newTOW.typeOperationText).id;
+            newTOW.typeOperation = typeOperationList.Find(x => x.name == newTOW.typeOperationText).id;
 
             if (formats.SelectedIndex != -1 )
             {
                 newTOW.formatText = formats.SelectedItem as String;
-                newTOW.format = formatsList.Find(i => i.format == newTOW.typeOperationText).id;
+                newTOW.format = formatsList.Find(x => x.format == newTOW.formatText).id;
             }
             if (TwoSides.IsEnabled == true)
             {
